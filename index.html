@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello World!</title>
+  </head>
+  <body>
+    
+    <script src="node_modules/moment/min/moment.min.js"></script>
+    <div>
+        <input id="input"></input>
+        <button onclick="myFOO()">Click me</button>
+    </div>
+    <div>
+        <input id="input2"></input>
+        <button onclick="myFO()">Click me</button>
+    </div>
+    <p id="demo"></p>
+    <script>
+    let date2 = '2018/04/01/0/0';
+    function myFO(date2){
+        let value2 = document.getElementById('input2').value
+        let g= moment('2018/04/01').format('Y/M/D/H/m')
+
+        console.log(g)
+        let h  = moment(g).set('m', 20);
+        console.log(h);
+    }
+    function myFOO() {
+        let sec = moment().format('X')
+        
+        //console.log("sec - "+ sec)
+        let value = document.getElementById('input').value
+        value = parseInt(value,10);
+        let to = parseInt(sec,10) + value;
+        console.log(moment().format())
+        //console.log("not sec - " + to)
+        let minus = to - sec;
+        setInterval ( ( ) => {       
+        if ( sec < to ){        
+            
+            minus = to - sec;
+            document.getElementById("demo").innerHTML = minus ;
+            sec ++;
+        }else{
+            minus = to - sec;
+            document.getElementById("demo").innerHTML = minus ;
+            return 0;
+        }
+    }   , 1000 ) ;
+    }
+   var localeData = moment.updateLocale('en', {
+   ordinal: function (number) {
+      var b = number ;
+      console.log(number)
+      return number ;
+   }
+   });
+   var m = moment().format('Do');
+    console.log(m)
+    </script>
+  </body>
+</html>
