@@ -7,25 +7,39 @@
   <body>
     
     <script src="node_modules/moment/min/moment.min.js"></script>
-    <div>
-        <input id="input"></input>
-        <button onclick="myFOO()">Click me</button>
-    </div>
+
     <div>
         <input id="input2"></input>
         <button onclick="myFO()">Click me</button>
     </div>
     <p id="demo"></p>
     <script>
-    let date2 = '2018/04/01/0/0';
-    function myFO(date2){
-        let value2 = document.getElementById('input2').value
-        let g= moment('2018/04/01').format('Y/M/D/H/m')
+    //console.log(moment(new Date()).format(' h:mm:ss a'));
+    function myFO(){
 
+        let value2 = document.getElementById('input2').value
+
+
+
+        console.log(moment.duration(moment()).asSeconds())
+        let j = moment.duration(moment()).asSecond()
+        console.log(j)
+        console.log(moment.utc(j*1000).format('h:mm:ss'))
+        let g = moment().add(1, 'minute').format('h:mm:ss')
+        let h = moment().add(2, 'minute').format('h:mm:ss')
         console.log(g)
-        let h  = moment(g).set('m', 20);
-        console.log(h);
+        console.log(g +" , "+ h)
     }
+
+
+
+
+
+
+
+
+
+
     function myFOO() {
         let sec = moment().format('X')
         
@@ -56,8 +70,7 @@
       return number ;
    }
    });
-   var m = moment().format('Do');
-    console.log(m)
+
     </script>
   </body>
 </html>
