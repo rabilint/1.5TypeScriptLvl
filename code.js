@@ -34,7 +34,7 @@ function myFO() {
       }
     }, 1000);
   } else {
-    clearInterval(myTimer);
+    clearInterval(myTimer
     let value2 = document.getElementById('input2').value;
     if (isNaN(value2)) {
       value2 = 0;
