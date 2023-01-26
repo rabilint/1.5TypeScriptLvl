@@ -25,7 +25,7 @@ function myFO() {
         document.getElementById("demo").innerHTML = time;
         timer = timer - 1;
       } else {
-        document.getElementById("demo).innerHTML = timer;
+        document.getElementById("demo").innerHTML = timer;
         clearInterval(myTimer);
         can = false;
         return can;
