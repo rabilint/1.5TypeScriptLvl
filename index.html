@@ -9,68 +9,10 @@
     <script src="node_modules/moment/min/moment.min.js"></script>
 
     <div>
-        <input id="input2"></input>
+        <input id="input2" placeholder="minute"></input>
         <button onclick="myFO()">Click me</button>
     </div>
     <p id="demo"></p>
-    <script>
-    //console.log(moment(new Date()).format(' h:mm:ss a'));
-    function myFO(){
-
-        let value2 = document.getElementById('input2').value
-
-
-
-        console.log(moment.duration(moment()).asSeconds())
-        let j = moment.duration(moment()).asSecond()
-        console.log(j)
-        console.log(moment.utc(j*1000).format('h:mm:ss'))
-        let g = moment().add(1, 'minute').format('h:mm:ss')
-        let h = moment().add(2, 'minute').format('h:mm:ss')
-        console.log(g)
-        console.log(g +" , "+ h)
-    }
-
-
-
-
-
-
-
-
-
-
-    function myFOO() {
-        let sec = moment().format('X')
-        
-        //console.log("sec - "+ sec)
-        let value = document.getElementById('input').value
-        value = parseInt(value,10);
-        let to = parseInt(sec,10) + value;
-        console.log(moment().format())
-        //console.log("not sec - " + to)
-        let minus = to - sec;
-        setInterval ( ( ) => {       
-        if ( sec < to ){        
-            
-            minus = to - sec;
-            document.getElementById("demo").innerHTML = minus ;
-            sec ++;
-        }else{
-            minus = to - sec;
-            document.getElementById("demo").innerHTML = minus ;
-            return 0;
-        }
-    }   , 1000 ) ;
-    }
-   var localeData = moment.updateLocale('en', {
-   ordinal: function (number) {
-      var b = number ;
-      console.log(number)
-      return number ;
-   }
-   });
-
-    </script>
+    <script src="code.js"></script>
   </body>
 </html>
