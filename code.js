@@ -47,7 +47,7 @@ function myFO() {
     let timer = myVarPlus - myVar;
     document.getElementById('demo').innerHTML = 0;
     const myTimer = setInterval(() => {
-      if (timer > 0) 
+      if (timer > 0) {
         if (timer * 1000 > 86400000) {
           time = moment.utc(timer * 1000).format('d:h:mm:ss');
         } else if (timer * 1000 > 3600000) {
